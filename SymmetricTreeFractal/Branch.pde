@@ -1,4 +1,3 @@
-
 class Branch
 {
   //start and end points
@@ -22,7 +21,7 @@ class Branch
     float thickness = map(len.mag(), 0, leng, 1, 5);
     strokeWeight(thickness);
     
-    stroke(#ED2222);   //color of the branch
+    stroke(#A70335);   //color of the branch
     line(strt.x, strt.y, en.x, en.y);
   }
   
@@ -40,7 +39,7 @@ class Branch
   Branch childA()
   {
     PVector nend = PVector.sub(en, strt);
-    nend.rotate(PI/4);
+    nend.rotate(PI/7);
     nend.mult(2/3.0);
     nend.add(en);
     Branch res = new Branch(en, nend);

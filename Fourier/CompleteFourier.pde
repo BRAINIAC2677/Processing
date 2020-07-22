@@ -1,12 +1,17 @@
+/*BISMILLAH
+THE WHITE WOLF
+NO DREAM IS TOO BIG AND NO DREAMER IS TOO SMALL*/
+
+
 float time = 0;  
-float lim = 5;  //No of circles or bending can be changed
-float r;
+float lim = 10;  //No of circles or bending can be changed
+float cirsize = 150;
 ArrayList<PVector> points = new ArrayList<PVector>(); //for storing cycloid points
 
 void setup()
 {
-  //fullScreen();
-  size(800, 600);
+  fullScreen();
+  //size(800, 600);
 }
 
 
@@ -31,7 +36,7 @@ void draw()
     px = x;
     py = y;
     float n = 2*i + 1;
-    r = 100*(4/(n*PI));
+    float r = cirsize*(4/(n*PI));
     strokeWeight(1);
     stroke(255, 100);
     ellipse(x, y, 2*r, 2*r);
@@ -62,7 +67,7 @@ void draw()
     //drawing the graph
     
     stroke(0, 255, 0);
-    strokeWeight(1);
+    strokeWeight(3);
     point(j, points.get(i).y);
  
     
@@ -72,5 +77,5 @@ void draw()
     j++;
   }
   
-  time += .01;
+  time += .02;
 }

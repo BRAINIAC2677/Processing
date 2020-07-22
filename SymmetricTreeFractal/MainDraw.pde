@@ -28,7 +28,7 @@ void setup()
 
 void draw()
 {
-  frameRate(1);
+  frameRate(2);
   for(Branch k: branches)
     k.disp();
   
@@ -37,9 +37,9 @@ void draw()
   PVector len = PVector.sub(branches.get(0).en, branches.get(0).strt);
   if(len.mag() > limit)
     update();
-  else
+  /*else
   {
     for(Branch k: branches)
       k.leaf();
-  }
+  }*/
 }
